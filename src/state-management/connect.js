@@ -15,9 +15,12 @@ const connect = (
 
 			const propsFromContext = mapStateToProps ? mapStateToProps(context) : {};
 
+			const actions = mapDispatchToProps
+				? bindActionCreators(mapDispatchToProps, context.dispatch)
+				: {};
 
 			return (
-				<ConnectedComponent {...props} {...propsFromContext}  />
+				<ConnectedComponent {...props} {...propsFromContext} {...actions} />
 			);
 		}}
 	</Context.Consumer>
