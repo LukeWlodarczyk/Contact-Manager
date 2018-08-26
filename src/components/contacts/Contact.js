@@ -11,7 +11,9 @@ class Contact extends Component {
 		this.setState({ showContactInfo: !this.state.showContactInfo });
 	};
 
-	onDeleteClick = id => {};
+	onDeleteClick = () => {
+		this.props.deleteContact(this.props.contact.id);
+	};
 
 	render() {
 		const { name, email, phone, id } = this.props.contact;
@@ -56,6 +58,7 @@ class Contact extends Component {
 
 Contact.propTypes = {
 	contact: PropTypes.object.isRequired,
+	deleteContact: PropTypes.func.isRequired,
 };
 
 export default Contact;
