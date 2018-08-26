@@ -9,7 +9,9 @@ const reducer = (state, action) => {
 };
 
 class Provider extends Component {
-	state = {};
+	state = {
+		contacts: [],
+	};
 
 	dispatch = action => this.setState(state => reducer(state, action));
 

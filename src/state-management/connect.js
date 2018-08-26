@@ -1,5 +1,6 @@
+import React from 'react';
 import Context from './context';
-import bindActionCreators from './bindActionCreators'
+import bindActionCreators from './bindActionCreators';
 
 const connect = (
 	mapStateToProps,
