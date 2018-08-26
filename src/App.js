@@ -5,6 +5,7 @@ import { Provider } from './state-management';
 
 import Header from './components/layout/Header';
 import Contacts from './components/contacts/Contacts';
+import AddContact from './components/contacts/AddContact';
 import NotFound from './components/layout/NotFound';
 
 class App extends Component {
@@ -17,7 +18,8 @@ class App extends Component {
 						<div className="container">
 							<Switch>
 								<Route exact path="/" component={Contacts} />
-								<Route exact path="/" component={NotFound} />
+								<Route exact path="/contact/add" component={AddContact} />
+								<Route component={NotFound} />
 							</Switch>
 						</div>
 					</div>
