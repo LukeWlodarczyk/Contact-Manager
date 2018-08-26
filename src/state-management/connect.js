@@ -14,7 +14,9 @@ const connect = (
 				);
 			}
 
-			const propsFromContext = mapStateToProps ? mapStateToProps(context) : {};
+			const propsFromContext = mapStateToProps
+				? mapStateToProps(context, props)
+				: {};
 
 			const actions = mapDispatchToProps
 				? bindActionCreators(mapDispatchToProps, context.dispatch)
